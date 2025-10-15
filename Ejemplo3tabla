@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Horario Escolar</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            color: blue;
+        }
+        th {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        td {
+            font-size: 16px;
+        }
+        p {
+            margin: 0; /* Para que el texto no tenga espacio extra */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Encabezado -->
+        <thead>
+            <tr>
+                <th><p>Lunes</p></th>
+                <th><p>Martes</p></th>
+                <th><p>Miércoles</p></th>
+                <th><p>Jueves</p></th>
+                <th><p>Viernes</p></th>
+            </tr>
+        </thead>
+
+        <!-- Cuerpo -->
+        <tbody>
+            <tr>
+                <td rowspan="2">Mates</td>
+                <td colspan="3" rowspan="2">Dibujo</td>
+                <td rowspan="2">Historia</td>
+            </tr>
+            <tr>
+                <!-- Celdas vacías porque ya están ocupadas por rowspan/colspan -->
+            </tr>
+            <tr>
+                <td rowspan="2">Física</td>
+                <td>Lengua</td>
+                <td>Inglés</td>
+                <td>Francés</td>
+                <td rowspan="2">Mates</td>
+            </tr>
+            <tr>
+                <td>EF</td>
+                <td>Fútbol</td>
+                <td>Tenis</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
