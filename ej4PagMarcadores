@@ -10,26 +10,30 @@
       }
   </style>
   </head>
-  <body>
-  <etiqueta id="rojo"></etiqueta>
-  <a href="#rojo"></a>
-
-
+  <body>  
+  
+     
   <h1>Ejemplo con marcadores locales</h1>
   <ol>
+      <li>Negro</li>
       <li>Rojo</li>
       <li>Amarillo</li>
       <li>Azul</li>
       <li>Verde</li>
+      <li>Blanco</li>
+
+      
   </ol>
     <br>
     <h1>Color negro</h1>
     <p>Lorem fistrum consectetur incididunt hasta luego Lucas amatomaa cillum. Enim tempor diodeno a wan por la gloria de mi madre ex jarl cillum la caidita consequat apetecan. Amatomaa va usté muy cargadoo no te digo trigo por no llamarte Rodrigor consequat sed. Sit amet elit ut magna consectetur te va a hasé pupitaa aliquip te va a hasé pupitaa. Sit amet la caidita consectetur la caidita por la gloria de mi madre minim a wan amatomaa. La caidita dolore officia a peich duis mamaar consequat se calle ustée a wan. Eiusmod tiene musho peligro dolore sed enim pecador. Al ataquerl diodenoo amatomaa qui caballo blanco caballo negroorl sed sexuarl quis papaar papaar quietooor. Elit fistro et amatomaa nostrud eiusmod incididunt ex te voy a borrar el cerito.</p>
+    
     <p>
-      Subir
+      <a class="Subir" href="#Rojo">Subir</a>
     </p>
     <h1>
       <a name="marca_rojo" id="marca_rojo">Color rojo</a>
+     
     </h1>
     <p>Consequat irure ese que llega enim consectetur quis pecador sed a gramenawer no puedor sexuarl. Tempor ahorarr eiusmod irure sexuarl amatomaa caballo blanco caballo negroorl dolore ahorarr commodo. De la pradera aliquip sit amet no puedor a peich quis qui pupita consectetur. Te va a hasé pupitaa al ataquerl ese que llega a wan diodenoo no puedor. Duis officia esse cillum por la gloria de mi madre a gramenawer jarl la caidita ese que llega quietooor nostrud. Benemeritaar sed se calle ustée jarl esse enim ahorarr a peich veniam. Va usté muy cargadoo enim diodenoo tiene musho peligro torpedo a peich diodeno velit papaar papaar. Al ataquerl occaecat te va a hasé pupitaa te voy a borrar el cerito ese que llega qui sed ad se calle ustée commodo et. Torpedo magna incididunt ullamco irure aliqua esse commodo.</p>
     <p>
@@ -70,3 +74,5 @@ Qui torpedo hasta luego Lucas ese hombree diodeno por la gloria de mi madre llev
   
 
 </body>
+
+</html>
