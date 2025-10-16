@@ -5,7 +5,7 @@
     <title>Horario Escolar</title>
     <style>
         table {
-            border-collapse: collapse;
+            border= "1";
             text-align: center;
             font-family: Arial, sans-serif;
         }
@@ -21,6 +21,7 @@
         td {
             font-size: 16px;
         }
+
         p {
             margin: 0; /* Para que el texto no tenga espacio extra */
         }
