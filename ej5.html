@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Galería de gatos</title>
+  <style>
+    .table-title {
+      text-align: center;
+      font-weight: 700;
+      padding: 8px 0;
+      border-bottom: 2px solid #030303;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    td {
+      vertical-align: middle;
+      padding: 10px;
+      text-align: center;
+    }
+    /* imagen central */
+    .center img {
+      height: 250px;
+      max-width: 500px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    /* imágenes laterales */
+    .side img {
+      height: 100px;
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    /* opcional: borde sencillo para ver la tabla */
+    .gallery-table {
+      border: 1px solid #000000;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .gallery-table td {
+      border-right: 1px solid #000000;
+    }
+    .gallery-table tr:last-child td {
+      border-bottom: none;
+    }
+    /* quitar línea derecha en la última columna visual */
+    .gallery-table td:last-child {
+      border-right: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="table-title">tabla_imagenes</div>
+
+  <table class="gallery-table" aria-label="Galería de gatos">
+    <tbody>
+      <tr>
+        <!-- celda superior izquierda -->
+        <td class="side">
+          <img alt="Gatitos (fuente 1)" src="img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg">
+        </td>
+
+        <!-- columna central: única celda (rowspan=2) -->
+        <td class="center" rowspan="2">
+          <img alt="Gato representativo (fuente principal)" src="img/45579541712_f58c1fd0ed_o.jpg">
+        </td>
+
+        <!-- celda superior derecha -->
+        <td class="side">
+          <img alt="Gatito (fuente 2)" src="img/caes-e-gatos-com-olhos-de-duas-cores-8-550x435.jpg">
+        </td>
+      </tr>
+
+      <tr>
+        <!-- celda inferior izquierda -->
+        <td class="side">
+          <img alt="Gato (fuente 3)" src="img/cat-5785005_640.jpg">
+        </td>
+
+        <!-- celda inferior derecha -->
+        <td class="side">
+          <img alt="Gato (fuente 4)" src="img/R.jpg">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
