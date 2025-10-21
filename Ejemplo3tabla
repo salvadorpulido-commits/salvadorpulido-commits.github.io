@@ -23,7 +23,7 @@
         }
 
         p {
-            margin: 0; /* Para que el texto no tenga espacio extra */
+            margin: 0; 
         }
     </style>
 </head>
@@ -48,7 +48,7 @@
                 <td rowspan="2">Historia</td>
             </tr>
             <tr>
-                <!-- Celdas vacías porque ya están ocupadas por rowspan/colspan -->
+                <!-- Celdas vacías rowspan/colspan -->
             </tr>
             <tr>
                 <td rowspan="2">Física</td>
