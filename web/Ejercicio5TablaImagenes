@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio imágenes</title>
+</head>
+<body>
+    <h1>Ejercicio imágenes</h1>
+    
+    <table border="1">
+             <!-- celda superior izquierda -->
+        <td class="side">
+          <img alt="Gatitos (fuente 1)" src="img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg">
+        </td>
+
+        <!-- columna central: única celda (rowspan=2) -->
+        <td class="center" rowspan="2">
+          <img alt="Gato representativo (fuente principal)" src="img/45579541712_f58c1fd0ed_o.jpg">
+        </td>
+
+        <!-- celda superior derecha -->
+        <td class="side">
+          <img alt="Gatito (fuente 2)" src="img/caes-e-gatos-com-olhos-de-duas-cores-8-550x435.jpg">
+        </td>
+      </tr>
+
+      <tr>
+        <!-- celda inferior izquierda -->
+        <td class="side">
+          <img alt="Gato (fuente 3)" src="img/cat-5785005_640.jpg">
+        </td>
+
+        <!-- celda inferior derecha -->
+        <td class="side">
+          <img alt="Gato (fuente 4)" src="img/R.jpg">
+        </td>
+      </tr>
+    </tbody>
+    </table>
+    
+<a href="../index.html">Volver</a>
+</body>
+</html>
