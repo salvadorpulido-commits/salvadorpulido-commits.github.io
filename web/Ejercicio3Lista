@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio listas</title>
+</head>
+<body>
+    <h1>Ejercicio listas</h1>
+    
+    <ol>
+    <ol type="I">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ol>
+
+    <hr>
+
+    <!-- Lista ordenada que comienza en 6 -->
+    <ol type="1" start="6">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ol>
+
+    <hr>
+
+    <!-- Lista no ordenada con círculos -->
+    <ul class="circle">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+    <hr>
+
+    <!-- Lista no ordenada con cuadrados -->
+    <ul class="square">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+    <hr>
+
+    <!-- Lista no ordenada con discos -->
+    <ul class="disc">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+<a href="../index.html">Volver</a>
+
+</body>
+
+</html>
