@@ -11,7 +11,7 @@
     <table border="1">
              <!-- celda superior izquierda -->
         <td class="side">
-          <img alt="Gatitos (fuente 1)" src="img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg">
+          <img alt="Gatitos (fuente 1)" src="C:\Users\salvador.pulido\Desktop\html\EJERCICIO HTML\img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg">
         </td>
 
         <!-- columna central: única celda (rowspan=2) -->
