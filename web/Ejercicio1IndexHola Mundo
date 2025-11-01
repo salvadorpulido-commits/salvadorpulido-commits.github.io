@@ -17,6 +17,8 @@
   <p>salvadorpulido</p>
   <script>
    alert ("Debe introducir una respuesta" );
-</script> 
+</script>
+
+<a href="../index.html">Volver</a> 
 </body>
 </html>
