@@ -2,29 +2,73 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-
+
+scale=1.0">
     <title>Sobre mí</title>
 </head>
 <body>
     <h1>Sobre mí</h1>
 
-    <p>Estoy en este Ciclo Formativo porque me interesa aprender y entender cómo funcionan las páginas web y las aplicaciones. Siempre me ha atraído el mundo de la tecnología y me gustaría dedicarme profesionalmente a ello.</p>
+    <p>Estoy en este Ciclo Formativo porque me interesa aprender y 
 
-    <p>De momento el Ciclo lo estoy llevando, que no es poco, aunque hay temas que requieren más atención y práctica, estoy aprendiendo mucho. Espero que al terminarlo pueda crear mis propios proyectos, aprender más lenguajes y sentirme preparado para trabajar en el sector.</p>
+entender cómo funcionan las páginas web y las aplicaciones. Siempre 
+
+me ha atraído el mundo de la tecnología y me gustaría dedicarme 
+
+profesionalmente a ello.</p>
+
+    <p>De momento el Ciclo lo estoy llevando, que no es poco, aunque 
+
+hay temas que requieren más atención y práctica, estoy aprendiendo 
+
+mucho. Espero que al terminarlo pueda crear mis propios proyectos, 
+
+aprender más lenguajes y sentirme preparado para trabajar en el 
+
+sector.</p>
     
     <h2>Personaje animado con el cual me identifico</h2> 
     
-    <p>El Gato con Botas de la pelicula Shrek, ya que es un personaje que combina valentía, humor y astucia, siendo un noble y leal compañero.</p>
+    <p>El Gato con Botas de la pelicula Shrek, ya que es un personaje 
+
+que combina valentía, humor y astucia, siendo un noble y leal 
+
+compañero.</p>
     
-    <img src="https://www.infobae.com/resizer/v2/C4QUMYDHD5GITEUEJJDSGA6DJA.jpg?auth=d1afddf522a3880291eb2746068ef32b0e8a2e4a387a82df856e9d7c4a7563cf&smart=true&width=992&height=558&quality=85" alt="Imagen Gato de Shrek" width="300">
+    <img 
+
+src="https://www.infobae.com/resizer/v2/C4QUMYDHD5GITEUEJJDSGA6DJA.jp
+
+g?
+
+auth=d1afddf522a3880291eb2746068ef32b0e8a2e4a387a82df856e9d7c4a7563cf
+
+&smart=true&width=992&height=558&quality=85" alt="Imagen Gato de 
+
+Shrek" width="300">
 
     <h2>Mis gustos (ordenados por preferencia):</h2>
     <ol>
-        <li>Música, generalmente 80s y 90s, varias ramas de la Electronica, Post-Punk/New Wave/Metal y algo de Hip Hop.</li>
+        <li>Música, generalmente 80s y 90s, varias ramas de la 
+
+Electronica, Post-Punk/New Wave/Metal y algo de Hip Hop.</li>
         <li>Tecnología aplicada a Informatica y Música.</li>
-        <li>Gatos, aunque ahora no tengo, siempre ha habido gatos en mi casa</li>
-        <li>Documentales, Series y Peliculas, sobre todo biopics de Grupos/movimientos musicales, Fantastico, Cine Inglés Policiaco/Gangsters, True Crime y Documentales biograficos, Historicos, Ciencia y Naturaleza.</li>
-        <li>Artes Urbanas Contemporaneas: Graffiti, Ilustradores, Tattoo y de Arte Clasico: la Pintura del Barroco y el Surrealismo del S. XX </li>
+        <li>Gatos, aunque ahora no tengo, siempre ha habido gatos en 
+
+mi casa</li>
+        <li>Documentales, Series y Peliculas, sobre todo biopics de 
+
+Grupos/movimientos musicales, Fantastico, Cine Inglés 
+
+Policiaco/Gangsters, True Crime y Documentales biograficos, 
+
+Historicos, Cienctificos y sobre Naturaleza.</li>
+        <li>Artes Urbanas Contemporaneas: Graffiti, Ilustradores, 
+
+Tattoo y de Arte Clasico: la Pintura del Barroco y el Surrealismo del 
+
+S. XX </li>
         
     </ol>
 
