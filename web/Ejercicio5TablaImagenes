@@ -11,29 +11,29 @@
     <table border="1">
              <!-- celda superior izquierda -->
         <td class="side">
-          <img alt="Gatitos (fuente 1)" src="C:\Users\salvador.pulido\Desktop\html\EJERCICIO HTML\img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg">
+          <img alt="Gatitos (fuente 1)" src="../img/360_F_456371884_Za6cOFgd0d1sRpcsG02lyeM1Nlx196DO.jpg"width="200" height="100" >
         </td>
 
         <!-- columna central: única celda (rowspan=2) -->
         <td class="center" rowspan="2">
-          <img alt="Gato representativo (fuente principal)" src="img/45579541712_f58c1fd0ed_o.jpg">
+          <img alt="Gato representativo (fuente principal)" src="../img/45579541712_f58c1fd0ed_o.jpg"width="300" height="150" >
         </td>
 
         <!-- celda superior derecha -->
         <td class="side">
-          <img alt="Gatito (fuente 2)" src="img/caes-e-gatos-com-olhos-de-duas-cores-8-550x435.jpg">
+          <img alt="Gatito (fuente 2)" src="../img/caes-e-gatos-com-olhos-de-duas-cores-8-550x435.jpg"width="200" height="100" ">
         </td>
       </tr>
 
       <tr>
         <!-- celda inferior izquierda -->
         <td class="side">
-          <img alt="Gato (fuente 3)" src="img/cat-5785005_640.jpg">
+          <img alt="Gato (fuente 3)" src="../img/cat-5785005_640.jpg"width="200" height="100" ">
         </td>
 
         <!-- celda inferior derecha -->
         <td class="side">
-          <img alt="Gato (fuente 4)" src="img/R.jpg">
+          <img alt="Gato (fuente 4)" src="../img/R.jpg"width="200" height="100" ">
         </td>
       </tr>
     </tbody>
