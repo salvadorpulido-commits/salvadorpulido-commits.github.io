@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Actividad simple</title>
+  <style>
+    /* Párrafos */
+    #p1 { font-style: italic; text-align: right; }
+    #p2 { text-transform: uppercase; text-decoration: line-through; }
+    #p3 { font-family: Arial, sans-serif; font-size: 120%; }
+    #p4 { font-weight: bold; text-shadow: 2px 2px 3px green; }
+
+    /* Contenedores (las 3 cajas) */
+    .box {
+      width: 400px;
+      height: 200px;
+      display: inline-block; /* las sitúa una al lado de otra */
+      border-radius: 15px;
+      padding: 10px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+    #box1 { background: #d6e5a7; }
+    #box2 { background: #a4d8d6; }
+    #box3 { background: #d4a2d8; }
+
+    /* Enlaces en box1: en fila, tamaño fijo, texto blanco */
+    #box1 a {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      color: white;
+      margin-right: 5px;
+      text-align: center;
+    }
+    #box1 a:nth-child(2) { background: darkgreen; }
+    #box1 a:nth-child(3) { background: darkblue; }
+    /* el primero lo dejamos con color por defecto en el HTML */
+
+    /* Enlaces en box2: uno debajo del otro */
+    #box2 a {
+      display: block;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      color: white;
+      margin-bottom: 6px;
+      background: darkred;
+      text-align: center;
+    }
+
+    /* Enlaces en box3: sin subrayado, hover cambia color y peso */
+    #box3 a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      margin-bottom: 6px;
+    }
+    #box3 a:hover {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS: Ejercicio 1</h1>
+
+
+    <p id="p1">Este es el párrafo número 1 en cursiva y alineado a la derecha.</p>
+
+    <p id="p2">Este también es un párrafo en minúsculas pero convertido en mayúsculas y tachado.</p>
+
+    <p id="p3">Como no hay dos sin tres, este será el tercero con un tipo de letra diferente y un 20% más grande.</p>
+
+    <p id="p4">Y por último, un texto en negrita y con sombrita en verde.</p>
+
+    <hr>
+
+  <div id="box1" class="box">
+    <strong>Buscadores:</strong><br><br>
+    <a href="#" style="background: darkred;">DuckDuckGo</a>
+    <a href="#" style="background: rgb(0, 139, 35);">Ecoisia</a>
+    <a href="#" style="background: rgb(0, 49, 139);">Google</a>
+  </div>
+
+  <div id="box2" class="box">
+    <strong>Redes:</strong><br><br>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Pinterest</a>
+  </div>
+
+  <div id="box3" class="box">
+    <strong>Noticias:</strong><br><br>
+    <a href="#">El País</a>
+    <a href="#">El Diario</a>
+    <a href="#">El Mundo</a>
+  </div>
+
+</body>
+</html>
+
