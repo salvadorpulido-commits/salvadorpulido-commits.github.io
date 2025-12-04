@@ -1,67 +1,70 @@
+/* Fondo de la página */
 body {
-background-color: #B5F4FF;
-font-family: Arial, sans-serif;
+    background-color: #B5F4FF;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
 }
 
-
+/* Estilo del título principal */
 h1 {
-font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
 }
-
-
+/* Cabecera */
 header {
-background-color: #007bff;
-padding: 15px;
-border-radius: 10px;
+    background-color: #007bff;
+    padding: 10px 0;
+    border-radius: 15px; 
 }
 
-
-nav a {
-color: white;
-text-decoration: none;
-margin-right: 15px;
+/* Menú de navegación */
+nav ul {
+    list-style: none;       /* Quitar puntos */
+    padding: 0;
+    margin: 0;
+    text-align: center;     /* Centrar enlaces */
 }
 
-
-nav a:hover {
-color: black;
+nav ul li {
+    display: inline-block;  /* Alineados en fila */
+    margin: 0 15px;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;  /* Quitar subrayado */
+    font-size: 18px;
+    transition: color 0.3s; /* Efecto de transición suave */
+}
+
+nav ul li a:hover {
+    color: #d3d3d3; /* Gris claro al pasar el ratón */
+}
+
+/* Estilos de la sección de contenido */
 
 #contenido {
-padding: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 20px;
+    padding: 20px;
+    text-align: center; /*centrar todo lo de dentro */
 }
 
-
+/* Título de sección */
 #contenido h2 {
-font-size: 28px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-
+/* Texto del párrafo */
 #contenido p {
-font-size: 18px;
-color: #333;
-margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-
+/* Imagen */
 #contenido img {
-max-width: 100%;
-height: auto;
-border-radius: 8px;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-}
-
-
-footer {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 15px;
-margin-top: 30px;
-border-radius: 8px;
+    width: 300px;
+    border-radius: 10px; 
 }
