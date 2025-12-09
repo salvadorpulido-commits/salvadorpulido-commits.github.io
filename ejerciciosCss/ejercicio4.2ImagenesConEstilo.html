@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagenes con Estilo</title>
+
+    <style>
+        /* Centramos todo el contenido */
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        /* Estilo general de los bloques */
+        .bloque {
+            width: 200px;    /* ancho fijo */
+            height: 200px;   /* alto fijo */
+            margin: 20px auto;    /* centrado con margen */
+            background-size: 50px 50px; /* tamaño de la imagen de fondo */
+        }
+
+        /* 1. Fondo centrado sin repetir */
+        .b1 {
+            border: 3px solid red;
+            background-image: url("../img/R.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* 2. Fondo repetido horizontalmente, abajo */
+        .b2 {
+            border: 3px dashed blue;
+            background-image: url("../img/R.jpg");
+            background-repeat: repeat-x;  /* repetir horizontalmente */
+            background-position: bottom;  /* posición abajo */
+        }
+
+        /* 3. Fondo repetido verticalmente, derecha */
+        .b3 {
+            border: 3px dotted green;
+            background-image: url("../img/R.jpg");
+            background-repeat: repeat-y;
+            background-position: right;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h2>Bloques con fondo</h2>
+
+<div class="bloque b1"></div>
+<div class="bloque b2"></div>
+<div class="bloque b3"></div>
+
+</body>
+</html>
