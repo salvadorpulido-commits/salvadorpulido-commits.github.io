@@ -1,0 +1,38 @@
+/* H1 fondo azul y texto blanco */
+h1 {
+background-color: blue;
+color: white;
+padding: 10px;
+text-align: center;
+}
+
+
+/* H2 fondo rojo, texto blanco y con transparencia */
+h2 {
+background-color: red;
+color: white;
+opacity: 0.8;
+padding: 8px;
+}
+
+
+/* P: letra cambiada, mayor, negrita y centrada */
+p {
+font-family: Arial, sans-serif;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+}
+
+
+/* Lista desordenada (ul) en cursiva y sombra roja */
+ul {
+font-style: italic;
+text-shadow: 2px 2px 4px red;
+}
+
+
+/* Lista ordenada (ol) con sombra azul */
+ol {
+text-shadow: 2px 2px 4px blue;
+}
