@@ -1,38 +1,58 @@
-/* H1 fondo azul y texto blanco */
-h1 {
-background-color: blue;
-color: white;
-padding: 10px;
-text-align: center;
+/* Fondo general */
+body {
+  background-color: #e6e3e3;
+  font-family: Arial, sans-serif;
 }
 
+/* Tarjeta principal */
+.tarjeta {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-/* H2 fondo rojo, texto blanco y con transparencia */
+/* Encabezado */
+.tarjeta h1 {
+  background-color: #2c6bed;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Contenido */
+.columnas {
+  padding: 15px;
+}
+
 h2 {
-background-color: red;
-color: white;
-opacity: 0.8;
-padding: 8px;
+  margin-top: 0;
 }
 
-
-/* P: letra cambiada, mayor, negrita y centrada */
 p {
-font-family: Arial, sans-serif;
-font-size: 20px;
-font-weight: bold;
-text-align: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
+@media (min-width: 700px) {
 
-/* Lista desordenada (ul) en cursiva y sombra roja */
-ul {
-font-style: italic;
-text-shadow: 2px 2px 4px red;
-}
+  .columnas {
+    display: flex;
+    gap: 20px;
+  }
 
+  .ingredientes {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+  }
 
-/* Lista ordenada (ol) con sombra azul */
-ol {
-text-shadow: 2px 2px 4px blue;
+  .preparacion {
+    flex: 2;
+  }
 }
