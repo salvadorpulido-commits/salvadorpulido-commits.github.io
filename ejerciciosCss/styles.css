@@ -102,3 +102,43 @@ p {
 img {
     box-shadow: 0px 0px 10px rgba(0,0,0,15);
 }
+
+/* Sección Inicio */
+#inicio {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor de logos */
+.logos {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px;               /* Espacio entre imágenes */
+}
+
+/* Logos */
+.logos img {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Imagen de perfil */
+#contenido img {
+    width: 150px;
+    border-radius: 50%; /* Imagen ovalada */
+    margin-bottom: 15px;
+}
+
+/* Subtítulos */
+#contenido h3 {
+    margin-top: 20px;
+}
+
+/* Listas */
+#contenido ul,
+#contenido ol {
+    text-align: left;   /* texto alineado a izquierda */
+    max-width: 400px;
+    margin: 10px auto;
+}
