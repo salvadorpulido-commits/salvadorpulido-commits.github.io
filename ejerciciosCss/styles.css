@@ -1,0 +1,164 @@
+/* ESTILOS GENERALES */
+body {
+    background-color: #B5F4FF;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CABECERA */
+header {
+    background-color: #007bff;
+    padding: 10px 0;
+    border-radius: 15px;
+}
+
+/* MENÚ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d3d3d3;
+}
+
+/* SECCIONES PRINCIPALES CON FLEXBOX */
+#inicio, #contenido, #contacto {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px); /* Altura mínima menos la cabecera */
+    padding: 20px;
+}
+
+/* SECCIÓN SOBRE MÍ - CENTRADO HORIZONTAL */
+#contenido {
+    align-items: center;
+}
+
+/* SECCIÓN INICIO - LOGOS */
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logos img {
+    width: 120px;
+    cursor: pointer;
+}
+
+/* TÍTULOS SECCIÓN SOBRE MÍ */
+#contenido h2 {
+    font-size: 28px;
+}
+
+#contenido h3 {
+    margin-top: 20px;
+}
+
+/* PÁRRAFOS */
+#contenido p {
+    font-size: 18px;
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* LISTAS */
+#contenido ul,
+#contenido ol {
+    text-align: left;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+/* IMÁGENES */
+#contenido img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 15px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ENLACE VOLVER */
+.volver {
+    margin-top: auto; /* botón hacia abajo */
+    text-align: left;
+    width: 100%;
+}
+
+.btn-volver {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3;
+}
+
+/* FORMULARIO CONTACTO */
+#contacto form {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#contacto input,
+#contacto textarea,
+#contacto button[type="submit"] {
+    border-radius: 5px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    border-radius: 10px;
+}
