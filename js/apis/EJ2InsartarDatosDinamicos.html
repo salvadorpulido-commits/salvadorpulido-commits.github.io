@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario + Tabla</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Formulario</h2>
+
+<form id="formulario">
+    Nombre: <input type="text" id="nombre"><br><br>
+    Apellidos: <input type="text" id="apellidos"><br><br>
+    Edad: <input type="number" id="edad"><br><br>
+    Ciudad: <input type="text" id="ciudad"><br><br>
+
+    <button type="submit">Añadir</button>
+</form>
+
+<h2>Tabla</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+    </tr>
+    </thead>
+    <tbody id="tablaDatos">
+    </tbody>
+</table>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#formulario").submit(function(e){
+            e.preventDefault(); // NO recargar página
+
+            // Recoger datos
+            var nombre = $("#nombre").val();
+            var apellidos = $("#apellidos").val();
+            var edad = $("#edad").val();
+            var ciudad = $("#ciudad").val();
+
+            // Validación edad
+            if (edad < 0) {
+                alert("La edad no puede ser negativa");
+                return;
+            }
+
+            // Crear objeto
+            var persona = {
+                nombre: nombre,
+                apellidos: apellidos,
+                edad: edad,
+                ciudad: ciudad
+            };
+
+            // Serializar y deserializar (como pide el ejercicio)
+            var jsonTexto = JSON.stringify(persona);
+            var objeto = JSON.parse(jsonTexto);
+
+            // Crear fila con función
+            var fila = crearFila(objeto);
+
+            // Añadir fila al tbody
+            $("#tablaDatos").append(fila);
+
+            // Limpiar formulario
+            $("#formulario")[0].reset();
+        });
+
+    });
+
+    // FUNCIÓN que crea el TR y lo devuelve
+    function crearFila(obj) {
+
+        var tr = $("<tr>");
+
+        var tdNombre = $("<td>").text(obj.nombre);
+        var tdApellidos = $("<td>").text(obj.apellidos);
+        var tdEdad = $("<td>").text(obj.edad);
+        var tdCiudad = $("<td>").text(obj.ciudad);
+
+        tr.append(tdNombre);
+        tr.append(tdApellidos);
+        tr.append(tdEdad);
+        tr.append(tdCiudad);
+
+        return tr;
+    }
+
+</script>
+
+</body>
+</html>
