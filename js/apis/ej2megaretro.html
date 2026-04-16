@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Megareto JSON + Tabla</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulario</h2>
+
+<form id="formulario">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos"><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad"><br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad"><br><br>
+
+    <button type="submit">Añadir</button>
+</form>
+
+<h2>Tabla</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+        <th>Acción</th>
+    </tr>
+    </thead>
+    <tbody id="tablaDatos"></tbody>
+</table>
+
+<script>
+
+    $(document).ready(function(){
+
+        // ARRAY GLOBAL
+        var listaPersonas = [];
+        var idActual = 0;
+
+        $("#formulario").submit(function(e){
+            e.preventDefault();
+
+            var nombre = $("#nombre").val();
+            var apellidos = $("#apellidos").val();
+            var edad = $("#edad").val();
+            var ciudad = $("#ciudad").val();
+
+            // Validación
+            if (edad < 0) {
+                alert("Edad no válida");
+                return;
+            }
+
+            // Crear objeto con ID
+            var persona = {
+                id: idActual++,
+                nombre: nombre,
+                apellidos: apellidos,
+                edad: edad,
+                ciudad: ciudad
+            };
+
+            // Añadir al array
+            listaPersonas.push(persona);
+
+            // Serializar
+            var jsonTexto = JSON.stringify(listaPersonas);
+
+            // Generar tabla
+            generaTabla(jsonTexto);
+
+            $("#formulario")[0].reset();
+        });
+
+        // FUNCIÓN GENERAR TABLA
+        function generaTabla(json){
+
+            // Deserializar
+            var lista = JSON.parse(json);
+
+            // Limpiar tabla
+            $("#tablaDatos").html("");
+
+            // Recorrer con forEach
+            lista.forEach(function(persona){
+                var fila = generaTR(persona);
+                $("#tablaDatos").append(fila);
+            });
+        }
+
+        // FUNCIÓN GENERAR TR
+        function generaTR(persona){
+
+            var tr = $("<tr>");
+
+            tr.append($("<td>").text(persona.nombre));
+            tr.append($("<td>").text(persona.apellidos));
+            tr.append($("<td>").text(persona.edad));
+            tr.append($("<td>").text(persona.ciudad));
+
+            // BOTÓN BORRAR
+            var boton = $("<button>").text("Eliminar");
+
+            boton.click(function(){
+
+                // Buscar posición por ID
+                for (var i = 0; i < listaPersonas.length; i++) {
+                    if (listaPersonas[i].id === persona.id) {
+                        listaPersonas.splice(i, 1);
+                        break;
+                    }
+                }
+
+                // Volver a generar tabla
+                var jsonTexto = JSON.stringify(listaPersonas);
+                generaTabla(jsonTexto);
+            });
+
+            tr.append($("<td>").append(boton));
+
+            return tr;
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
