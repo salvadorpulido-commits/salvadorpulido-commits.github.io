@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario + Tabla</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulario</h2>
+
+<form id="formulario">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos"><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad"><br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad"><br><br>
+
+    <button type="submit">Añadir</button>
+</form>
+
+<h2>Tabla</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+    </tr>
+    </thead>
+    <tbody id="tablaDatos"></tbody>
+</table>
+
+<h3>Estadísticas</h3>
+<p id="estadisticas"></p>
+
+<script>
+
+    $(document).ready(function(){
+
+        var listaPersonas = [];
+        var idActual = 0;
+
+        $("#formulario").submit(function(e){
+            e.preventDefault();
+
+            var nombre = $("#nombre").val();
+            var apellidos = $("#apellidos").val();
+            var edad = $("#edad").val();
+            var ciudad = $("#ciudad").val();
+
+            // VALIDAR CAMPOS VACÍOS
+            if (nombre === "") {
+                alert("El campo nombre es obligatorio");
+                return;
+            }
+            if (apellidos === "") {
+                alert("El campo apellidos es obligatorio");
+                return;
+            }
+            if (edad === "") {
+                alert("El campo edad es obligatorio");
+                return;
+            }
+            if (ciudad === "") {
+                alert("El campo ciudad es obligatorio");
+                return;
+            }
+
+            // VALIDAR EDAD
+            if (edad < 0) {
+                alert("La edad no puede ser negativa");
+                return;
+            }
+
+            // Crear objeto con ID
+            var persona = {
+                id: idActual++,
+                nombre: nombre,
+                apellidos: apellidos,
+                edad: parseInt(edad),
+                ciudad: ciudad
+            };
+
+            listaPersonas.push(persona);
+
+            var jsonTexto = JSON.stringify(persona);
+            var objeto = JSON.parse(jsonTexto);
+
+            var fila = crearFila(objeto);
+
+            $("#tablaDatos").append(fila);
+
+            calcularEstadisticas();
+
+            $("#formulario")[0].reset();
+        });
+
+        function crearFila(obj) {
+
+            var tr = $("<tr>").attr("id", obj.id);
+
+            tr.append($("<td>").text(obj.nombre));
+            tr.append($("<td>").text(obj.apellidos));
+            tr.append($("<td>").text(obj.edad));
+            tr.append($("<td>").text(obj.ciudad));
+
+            // CLICK PARA BORRAR
+            tr.click(function(){
+
+                var id = obj.id;
+
+                // eliminar del array
+                for (var i = 0; i < listaPersonas.length; i++) {
+                    if (listaPersonas[i].id === id) {
+                        listaPersonas.splice(i, 1);
+                        break;
+                    }
+                }
+
+                // eliminar del DOM
+                $(this).remove();
+
+                calcularEstadisticas();
+            });
+
+            return tr;
+        }
+
+        function calcularEstadisticas() {
+
+            if (listaPersonas.length === 0) {
+                $("#estadisticas").text("");
+                return;
+            }
+
+            var suma = 0;
+            var max = listaPersonas[0].edad;
+            var min = listaPersonas[0].edad;
+
+            for (var i = 0; i < listaPersonas.length; i++) {
+                var edad = listaPersonas[i].edad;
+
+                suma += edad;
+
+                if (edad > max) max = edad;
+                if (edad < min) min = edad;
+            }
+
+            var media = suma / listaPersonas.length;
+
+            var texto = "Suma = " + suma +
+                " | Media = " + media +
+                " | Máximo = " + max +
+                " | Mínimo = " + min;
+
+            $("#estadisticas").text(texto);
+
+            console.log(texto);
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
