@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <title>Formulario + Tabla</title>
 
-    <!-- jQuery -->
+    <!-- jQuery (puedes dejarlo así sin problema) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
 
 <h2>Formulario</h2>
 
 <form id="formulario">
-    Nombre: <input type="text" id="nombre"><br><br>
-    Apellidos: <input type="text" id="apellidos"><br><br>
-    Edad: <input type="number" id="edad"><br><br>
-    Ciudad: <input type="text" id="ciudad"><br><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos"><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad"><br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad"><br><br>
 
     <button type="submit">Añadir</button>
 </form>
 
 <h2>Tabla</h2>
 
-<table border="1">
+<table>
     <thead>
     <tr>
         <th>Nombre</th>
@@ -40,9 +56,8 @@
     $(document).ready(function(){
 
         $("#formulario").submit(function(e){
-            e.preventDefault(); // NO recargar página
+            e.preventDefault();
 
-            // Recoger datos
             var nombre = $("#nombre").val();
             var apellidos = $("#apellidos").val();
             var edad = $("#edad").val();
@@ -62,14 +77,14 @@
                 ciudad: ciudad
             };
 
-            // Serializar y deserializar (como pide el ejercicio)
+            // Serializar y deserializar
             var jsonTexto = JSON.stringify(persona);
             var objeto = JSON.parse(jsonTexto);
 
-            // Crear fila con función
+            // Crear fila
             var fila = crearFila(objeto);
 
-            // Añadir fila al tbody
+            // Añadir a tabla
             $("#tablaDatos").append(fila);
 
             // Limpiar formulario
@@ -78,7 +93,7 @@
 
     });
 
-    // FUNCIÓN que crea el TR y lo devuelve
+    // Función que crea la fila
     function crearFila(obj) {
 
         var tr = $("<tr>");
