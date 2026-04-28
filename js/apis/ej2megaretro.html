@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Megareto JSON + Tabla</title>
+    <title>Formulario + Tabla + Array</title>
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
@@ -11,6 +12,11 @@
             border: 1px solid black;
             border-collapse: collapse;
             padding: 5px;
+        }
+
+        tr:hover {
+            background-color: #eeeeee;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -44,40 +50,65 @@
         <th>Apellidos</th>
         <th>Edad</th>
         <th>Ciudad</th>
-        <th>Acción</th>
     </tr>
     </thead>
-    <tbody id="tablaDatos"></tbody>
+
+    <tbody id="tablaDatos">
+    </tbody>
 </table>
+
+<h2>Estadísticas</h2>
+
+<p id="estadisticas"></p>
 
 <script>
 
     $(document).ready(function(){
 
-        // ARRAY GLOBAL
+        // Array donde se guardan los datos
         var listaPersonas = [];
-        var idActual = 0;
 
         $("#formulario").submit(function(e){
             e.preventDefault();
 
+            // Recoger datos
             var nombre = $("#nombre").val();
             var apellidos = $("#apellidos").val();
             var edad = $("#edad").val();
             var ciudad = $("#ciudad").val();
 
-            // Validación
-            if (edad < 0) {
-                alert("Edad no válida");
+            // Validar campos vacíos
+            if (nombre === "") {
+                alert("El campo nombre es obligatorio");
                 return;
             }
 
-            // Crear objeto con ID
+            if (apellidos === "") {
+                alert("El campo apellidos es obligatorio");
+                return;
+            }
+
+            if (edad === "") {
+                alert("El campo edad es obligatorio");
+                return;
+            }
+
+            if (ciudad === "") {
+                alert("El campo ciudad es obligatorio");
+                return;
+            }
+
+            // Validar edad
+            if (edad < 0) {
+                alert("La edad no puede ser negativa");
+                return;
+            }
+
+            // Crear objeto
             var persona = {
-                id: idActual++,
                 nombre: nombre,
                 apellidos: apellidos,
-                edad: edad,
+                edad: parseInt(edad),
                 ciudad: ciudad
             };
 
@@ -88,13 +119,17 @@
             var jsonTexto = JSON.stringify(listaPersonas);
 
             // Generar tabla
-            generaTabla(jsonTexto);
+            generarTabla(jsonTexto);
 
+            // Calcular estadísticas
+            calcularEstadisticas();
+
+            // Limpiar formulario
             $("#formulario")[0].reset();
         });
 
-        // FUNCIÓN GENERAR TABLA
-        function generaTabla(json){
+        // Función que genera toda la tabla
+        function generarTabla(json) {
 
             // Deserializar
             var lista = JSON.parse(json);
@@ -102,15 +137,17 @@
             // Limpiar tabla
             $("#tablaDatos").html("");
 
-            // Recorrer con forEach
-            lista.forEach(function(persona){
-                var fila = generaTR(persona);
+            // Recorrer array
+            lista.forEach(function(persona, indice){
+
+                var fila = generarTR(persona, indice);
+
                 $("#tablaDatos").append(fila);
             });
         }
 
-        // FUNCIÓN GENERAR TR
-        function generaTR(persona){
+        // Función que crea un TR
+        function generarTR(persona, indice) {
 
             var tr = $("<tr>");
 
@@ -119,27 +156,68 @@
             tr.append($("<td>").text(persona.edad));
             tr.append($("<td>").text(persona.ciudad));
 
-            // BOTÓN BORRAR
-            var boton = $("<button>").text("Eliminar");
+            // Click para borrar
+            tr.click(function(){
 
-            boton.click(function(){
+                // Borrar del array usando índice
+                listaPersonas.splice(indice, 1);
 
-                // Buscar posición por ID
-                for (var i = 0; i < listaPersonas.length; i++) {
-                    if (listaPersonas[i].id === persona.id) {
-                        listaPersonas.splice(i, 1);
-                        break;
-                    }
-                }
+                // Eliminar fila
+                $(this).remove();
 
-                // Volver a generar tabla
+                // Volver a serializar
                 var jsonTexto = JSON.stringify(listaPersonas);
-                generaTabla(jsonTexto);
+
+                // Regenerar tabla
+                generarTabla(jsonTexto);
+
+                // Recalcular estadísticas
+                calcularEstadisticas();
             });
 
-            tr.append($("<td>").append(boton));
-
             return tr;
+        }
+
+        // Función estadísticas
+        function calcularEstadisticas() {
+
+            if (listaPersonas.length === 0) {
+                $("#estadisticas").text("No hay datos");
+                return;
+            }
+
+            var suma = 0;
+            var max = listaPersonas[0].edad;
+            var min = listaPersonas[0].edad;
+
+            for (var i = 0; i < listaPersonas.length; i++) {
+
+                var edad = listaPersonas[i].edad;
+
+                suma += edad;
+
+                if (edad > max) {
+                    max = edad;
+                }
+
+                if (edad < min) {
+                    min = edad;
+                }
+            }
+
+            var media = suma / listaPersonas.length;
+
+            $("#estadisticas").html(
+                "Suma = " + suma + "<br>" +
+                "Media = " + media.toFixed(2) + "<br>" +
+                "Máximo = " + max + "<br>" +
+                "Mínimo = " + min
+            );
+
+            console.log("Suma:", suma);
+            console.log("Media:", media);
+            console.log("Máximo:", max);
+            console.log("Mínimo:", min);
         }
 
     });
