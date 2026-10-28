@@ -5,15 +5,56 @@
      <title>Tabla con Imagenes</title>
  </head>
 
- <body>
+    <body>
 
-    
- </body>
+     <h1>Tabla con Imagenes</h1>
 
+        <table border = "1">
 
+            <tr>
+                <!-- celda superior izquierda -->
+                <td class="side">
 
+                <img src="../img/DanceOpera.jpg" alt="Dance Opera Records" width="200" height="100" >
+        
+                </td>
+            
+                <!-- columna central con unica celda central -->
 
+                <td class="center" rowspan="2">
+                
+                <img src="../img/r&s.jpg" alt="R&S Records" width="250" height="500" >
+        
+                </td>
 
+                <!-- celda superior derecha -->
+                <td class="side">
+
+                <img src="../img/musicmanrecords.jpg" alt="Music Man Records" width="200" height="100" >
+        
+                </td>
+            </tr>
+
+            <tr>
+                <!-- celda inferior izquierda -->
+                <td class="side">
+
+                <img src="../img/pinkRecords.jpg" alt="Pink Records" width="200" height="100" >
+        
+                </td>
+
+                <!-- celda inferior derecha -->
+
+                <td class="side">
+
+                <img src="../img/Quality.jpg" alt="Quality Madrid" width="200" height="100">
+
+                </td>
+            </tr>
+
+        </table>
+
+    </body>
 
 
 </html>
