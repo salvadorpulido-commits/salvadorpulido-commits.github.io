@@ -1,15 +1,133 @@
 <!DOCTYPE html>
 <meta lang="es">
 
-<head>    
+<head>
     <meta charset="utf-8">
     <title>Ejercicio 2: Tablas Complejas</title>
+    <style>
+        table {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
     <h1>Ejercicio 2: Creacion de Tablas Complejas</h1>
-    
+
+    <!--Diseña un horario semanal del módulo LMSGI y otros módulos del ciclo DAM utilizando la etiqueta <table>:
+        Agrega las etiquetas estructurales <thead>, <tbody> y <tfoot>.
+        Utiliza <th> para los días de la semana y las horas.
+        Aplica colspan para representar asignaturas que ocupen dos o más horas consecutivas.
+        Aplica rowspan para representar un descanso/recreo que abarque varias columnas o celdas según corresponda.
+        En el <tfoot>, añade una celda que combine varias columnas para mostrar el número total de horas semanales.-->
+
+    <h3>Horario 1º DAM</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Horas/dias</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- 1ª Hora 8:15-->
+
+            <tr>
+                <th>08:15</th>
+                <td rowspan="2">ENDES</td>
+                <td rowspan="2">BADAT</td>
+                <td colspan="2">IPE</td>
+                <td>LMSGI</td>
+            </tr>
+
+            <!-- 2ª Hora 9:15-->
+
+            <tr>
+                <th>09:15</th>
+
+                <td>LMSGI</td>
+                <td>PROG</td>
+                <td>IPE</td>
+            </tr>
+
+            <!-- 3ª Hora 10:15-->
+
+            <tr>
+                <th>10:15</th>
+
+                <td>SI</td>
+                <td>PROG</td>
+                <td>DIGIT</td>
+                <td colspan="2">BADAT</td>
+            </tr>
+
+            <!-- Recreo 11:15-->
+
+            <tr>
+                <th>11:15</th>
+                <td colspan="5">Segmento de Ocio</td>
+
+            </tr>
+
+            <!-- 4ª Hora 11:45-->
+
+            <tr>
+                <th>11:45</th>
+
+                <td rowspan="2">PROG</td>
+                <td>PROG</td>
+                <td>SOST</td>
+                <td>ENDES</td>
+                <td rowspan="3">PROG</td>
+            </tr>
+
+            <!-- 5ª Hora 12:45-->
+            <tr>
+                <th>12:45</th>
+
+                <td rowspan="2">SI</td>
+                <td rowspan="2">BADAT</td>
+                <td rowspan="2">SI</td>
+            </tr>
+
+
+            <!-- 6ª Hora 13:45-->
+
+            <tr>
+                <th>13:45</th>
+
+                <td>LMSGI</td>
+            </tr>
+
+        </tbody>
+
+        <!-- pie de la tabla con horas totales semanales y por asignatura-->
+
+        <tfoot>
+            <tr>
+                <th colspan="2">Total horas semanales</th>
+                <td colspan="4">30 horas (3h LMSGI, 8h PROG, 6h BADAT, 5h SI, 3h ENDES, 3h IPE1, 1h Digitalización, 1h
+                    Sostenibilidad)
+                </td>
+            </tr>
+        </tfoot>
+
+
+
+
+
+
+
+
+    </table>
+
 </body>
 
 </html>
