@@ -38,9 +38,31 @@
 
     <h4>Tarea B: embed</h4>
 
-    <embed>
+    <embed src="../media/apuntes.pdf" type="application/pdf" width="100%" height="500px">
 
+    <!--Tarea C (<object>): Embebe una página web externa dentro de tu propia web usando la etiqueta <object>.
+        Usa los atributos data="https://www.wikipedia.org" y type="text/html".
+        Añade dentro del bloque <object> un texto alternativo como contenido de respaldo (fallback) que diga: "Tu navegador no admite la visualización de este objeto incrustado".-->    
 
+    <h4>Tarea C: object</h4>
+
+    <object data="https://www.wikipedia.org" type="text/html" width="100%" height="500px">Tu navegador no admite la visualizacion de este objeto incrustado</object>
+    
+    <hr>
+    <!--Sección 2: Reproductores Multimedia Nativos (<video>, <audio> y <source>)
+        
+        Tarea A (<video> y <source>): Descarga un vídeo corto en formato MP4 (o usa uno propio), 
+        guárdalo en la carpeta media/ como muestra.mp4 y busca una imagen descriptiva como portada (portada.jpg).
+        Diseña un reproductor nativo con la etiqueta <video> usando los atributos controls, width="640" y poster="media/portada.jpg".
+        Dentro del <video>, define el recurso mediante <source src="media/muestra.mp4" type="video/mp4">.
+        Agrega una segunda etiqueta <source> apuntando a una versión en .webm si dispusieras de ella y, al final, 
+        un mensaje de texto plano en caso de que el navegador no soporte reproducción multimedia.-->
+
+    <h3>· Sección 2: Reproductores Multimedia Nativos</h3> 
+    <br>
+    <h4>Tarea A: iframe</h4>   
+
+    <video controls width="640" poster="../media/portada.jpg"><source src="../media/muestra.mp4" type="video/mp4"><source src="../media/muestra.webm" type="video/webm">Tu navegador no admite la reproduccion multimedia</video>
 
 </body>
 </html>
