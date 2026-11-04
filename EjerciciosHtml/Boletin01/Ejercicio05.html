@@ -17,16 +17,16 @@
         Ajusta sus dimensiones a width="560" y height="315".
         Añade el atributo loading="lazy" para optimizar la carga y un atributo title="Vídeo tutorial de HTML5" por accesibilidad.-->
 
-    <h3>· Sección 1: Marcos e Integración Externa</h3> 
-    <br>
-    <h4>Tarea A: iframe</h4>   
+    <h2><u>· Sección 1: Marcos e Integración Externa</u></h2> 
+   
+    <h3>Tarea A: iframe</h3>   
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eesyGnJwfAY?si=A3LjvSGnTnLsEOFm" loading="lazy" title="Vídeo tutorial de HTML5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <!--Tarea B (<embed>): Busca o descarga un documento en formato PDF (por ejemplo, el programa del módulo o una guía rápida de Git), guárdalo como apuntes.pdf dentro de tu carpeta media/ e insértalo en la página usando <embed>.
         Define los atributos src="media/apuntes.pdf", type="application/pdf", width="100%" y height="500px"-->
 
-    <h4>Tarea B: embed</h4>
+    <h3>Tarea B: embed</h3>
 
     <embed src="../media/apuntes.pdf" type="application/pdf" width="100%" height="500px">
 
@@ -34,7 +34,7 @@
         Usa los atributos data="https://www.wikipedia.org" y type="text/html".
         Añade dentro del bloque <object> un texto alternativo como contenido de respaldo (fallback) que diga: "Tu navegador no admite la visualización de este objeto incrustado".-->    
 
-    <h4>Tarea C: object</h4>
+    <h3>Tarea C: object</h3>
 
     <object data="https://www.wikipedia.org" type="text/html" width="100%" height="500px">Tu navegador no admite la visualizacion de este objeto incrustado</object>
     
@@ -48,9 +48,9 @@
         Agrega una segunda etiqueta <source> apuntando a una versión en .webm si dispusieras de ella y, al final, 
         un mensaje de texto plano en caso de que el navegador no soporte reproducción multimedia.-->
 
-    <h3>· Sección 2: Reproductores Multimedia Nativos</h3> 
-    <br>
-    <h4>Tarea A: iframe</h4>   
+    <h2><u>· Sección 2: Reproductores Multimedia Nativos</u></h2> 
+  
+    <h3>Tarea A: iframe</h3>   
 
     <video controls width="640" poster="../media/portada.jpg"><source src="../media/muestra.mp4" type="video/mp4"><source src="../media/muestra.webm" type="video/webm">Tu navegador no admite la reproduccion multimedia</video>
 
@@ -62,7 +62,7 @@
     Añade una segunda opción de audio alternativa con otra etiqueta <source> 
     especificando un formato OGG (type="audio/ogg").-->
 
-    <h4>Tarea B: audio y source</h4> 
+    <h3>Tarea B: audio y source</h3> 
     <p>Audio libre de derechos por Elijah_K: What's going on.</p>
     <audio controls><source src="../media/pista.mp3" type="audio/mpeg"><source src="media/pista.ogg" type="audio/ogg">Audio</audio>
     
@@ -75,14 +75,18 @@
        Dibuja un rectángulo de fondo (<rect>) de color azul (fill="blue") y un 
        círculo superpuesto (<circle>) de color amarillo (fill="yellow") con un borde rojo (stroke="red").-->
 
-        <h3>· Seccion 3: Graficos Vectoriales y Mapa de Bits.</h3>
-        <br>
-        <h4>Tarea A: SVG.</h4>
+        <h2><u>· Seccion 3: Graficos Vectoriales y Mapa de Bits.</u></h2>
+     
+        <h3>Tarea A: SVG.</h3>
 
         <svg width="200" height="200">
             <rect width="100" height="100" fill="blue"/>
             <circle cx="100" cy="100" r="50" fill="yellow" stroke="red"/>
         </svg>
+
+        
+
+
 
 </body>
 </html>
