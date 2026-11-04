@@ -17,11 +17,14 @@
         Ajusta sus dimensiones a width="560" y height="315".
         Añade el atributo loading="lazy" para optimizar la carga y un atributo title="Vídeo tutorial de HTML5" por accesibilidad.-->
 
-    <h2><u>· Sección 1: Marcos e Integración Externa</u></h2> 
-   
-    <h3>Tarea A: iframe</h3>   
+    <h2><u>· Sección 1: Marcos e Integración Externa</u></h2>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/eesyGnJwfAY?si=A3LjvSGnTnLsEOFm" loading="lazy" title="Vídeo tutorial de HTML5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3>Tarea A: iframe</h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eesyGnJwfAY?si=A3LjvSGnTnLsEOFm" loading="lazy"
+        title="Vídeo tutorial de HTML5" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <!--Tarea B (<embed>): Busca o descarga un documento en formato PDF (por ejemplo, el programa del módulo o una guía rápida de Git), guárdalo como apuntes.pdf dentro de tu carpeta media/ e insértalo en la página usando <embed>.
         Define los atributos src="media/apuntes.pdf", type="application/pdf", width="100%" y height="500px"-->
@@ -32,12 +35,13 @@
 
     <!--Tarea C (<object>): Embebe una página web externa dentro de tu propia web usando la etiqueta <object>.
         Usa los atributos data="https://www.wikipedia.org" y type="text/html".
-        Añade dentro del bloque <object> un texto alternativo como contenido de respaldo (fallback) que diga: "Tu navegador no admite la visualización de este objeto incrustado".-->    
+        Añade dentro del bloque <object> un texto alternativo como contenido de respaldo (fallback) que diga: "Tu navegador no admite la visualización de este objeto incrustado".-->
 
     <h3>Tarea C: object</h3>
 
-    <object data="https://www.wikipedia.org" type="text/html" width="100%" height="500px">Tu navegador no admite la visualizacion de este objeto incrustado</object>
-    
+    <object data="https://www.wikipedia.org" type="text/html" width="100%" height="500px">Tu navegador no admite la
+        visualizacion de este objeto incrustado</object>
+
     <hr>
     <!--Sección 2: Reproductores Multimedia Nativos (<video>, <audio> y <source>)
         
@@ -48,13 +52,16 @@
         Agrega una segunda etiqueta <source> apuntando a una versión en .webm si dispusieras de ella y, al final, 
         un mensaje de texto plano en caso de que el navegador no soporte reproducción multimedia.-->
 
-    <h2><u>· Sección 2: Reproductores Multimedia Nativos</u></h2> 
-  
-    <h3>Tarea A: iframe</h3>   
+    <h2><u>· Sección 2: Reproductores Multimedia Nativos</u></h2>
 
-    <video controls width="640" poster="../media/portada.jpg"><source src="../media/muestra.mp4" type="video/mp4"><source src="../media/muestra.webm" type="video/webm">Tu navegador no admite la reproduccion multimedia</video>
+    <h3>Tarea A: iframe</h3>
 
-<!--Tarea B (<audio> y <source>): Consigue un archivo de audio en MP3 
+    <video controls width="640" poster="../media/portada.jpg">
+        <source src="../media/muestra.mp4" type="video/mp4">
+        <source src="../media/muestra.webm" type="video/webm">Tu navegador no admite la reproduccion multimedia
+    </video>
+
+    <!--Tarea B (<audio> y <source>): Consigue un archivo de audio en MP3 
     (como una pista de música libre de derechos o un podcast de desarrollo web) 
     y guárdalo en media/pista.mp3.
     Crea un reproductor de audio utilizando la etiqueta <audio controls>.
@@ -62,10 +69,13 @@
     Añade una segunda opción de audio alternativa con otra etiqueta <source> 
     especificando un formato OGG (type="audio/ogg").-->
 
-    <h3>Tarea B: audio y source</h3> 
+    <h3>Tarea B: audio y source</h3>
     <p>Audio libre de derechos por Elijah_K: What's going on.</p>
-    <audio controls><source src="../media/pista.mp3" type="audio/mpeg"><source src="media/pista.ogg" type="audio/ogg">Audio</audio>
-    
+    <audio controls>
+        <source src="../media/pista.mp3" type="audio/mpeg">
+        <source src="media/pista.ogg" type="audio/ogg">Audio
+    </audio>
+
     <hr>
 
     <!--Sección 3: Gráficos Vectoriales y Mapa de Bits (<svg> y <canvas>)
@@ -75,18 +85,46 @@
        Dibuja un rectángulo de fondo (<rect>) de color azul (fill="blue") y un 
        círculo superpuesto (<circle>) de color amarillo (fill="yellow") con un borde rojo (stroke="red").-->
 
-        <h2><u>· Seccion 3: Graficos Vectoriales y Mapa de Bits.</u></h2>
-     
-        <h3>Tarea A: SVG.</h3>
+    <h2><u>· Seccion 3: Graficos Vectoriales y Mapa de Bits.</u></h2>
 
-        <svg width="200" height="200">
-            <rect width="100" height="100" fill="blue"/>
-            <circle cx="100" cy="100" r="50" fill="yellow" stroke="red"/>
-        </svg>
+    <h3>Tarea A: SVG.</h3>
 
-        
+    <svg width="200" height="200">
+        <rect width="100" height="100" fill="blue" />
+        <circle cx="100" cy="100" r="50" fill="yellow" stroke="red" />
+    </svg>
+
+    <!--Tarea B (<canvas>): Define un área de lienzo en blanco especificando <canvas id="miLienzo" width="300" height="150">.
+           Añade el mensaje "Tu navegador no soporta el elemento Canvas" en su interior.
+           Agrega el siguiente bloque de código JavaScript básico al final para renderizar un gráfico de prueba:
+            <script>
+             const canvas = document.getElementById('miLienzo');
+             const ctx = canvas.getContext('2d');
+             ctx.fillStyle = 'green';
+             ctx.fillRect(10, 10, 150, 80);
+             ctx.moveTo(0, 0);
+             ctx.lineTo(200, 100); 
+             ctx.stroke(); 
+            </script>-->
+
+    <h3>Tarea b: Canvas.</h3>
+
+    <canvas id="miLienzo" width="300" height="150">Tu navegador no soporta el elemento Canvas</canvas>
+
+    <script>
+        const canvas = document.getElementById('miLienzo');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 150, 80);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke(); 
+    </script>
+
+
 
 
 
 </body>
+
 </html>
