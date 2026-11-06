@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="mensaje"></textarea>
+            <p>
+            <label for="Mascota">¿Tienes Mascota?</label>
+            <input type="checkbox" name="Tiene mascota">
+            </p>
+
+            <p>
+                <label>Sexo</label>
+                <input type="radio" name="Sexo" value="hombre">Hombre
+                <input type="radio" name="Sexo" value="mujer">Mujer
+                <input type="radio" name="Sexo" value="nsnc">NsNc
+                
+            </p>
+            <label for="numero">Edad</label>
+            <input type="number" name="numero" id="numero" min="16" max="50">
+           </fieldset>
+        <input type="submit" value="Enviar">
+        <button type="button" id="boton">boton</button>
+    </form>
+
+
+</body>
+
+
+
+</html>
