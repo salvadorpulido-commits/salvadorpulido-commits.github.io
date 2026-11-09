@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Autentificacion Basico</title>
+
+</head>
+
+<body>
+
+<form action="https://lm.ciclo.iesnervion.es/" method="post">
+
+    <fieldset>
+     <label for="Nombre">Nombre:</label>
+     <input name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre:">
+
+     <label for="email">Email:</label>
+     <input id="email" name="email" type="email" placeholder="usuario@dominio.com">
+
+     <label for="password">Contraseña:</label>
+     <input name="password" type="text" placeholder="Introduce la contraseña:">
+
+      <p>
+            <label for="checkbox">Recordar sesión</label>
+            <input type="checkbox" name="checkbox">
+
+      </p>
+
+      
+     
+    </fieldset>
+    
+</form>
+
+    
+</body>
+
+
+
+</html>
