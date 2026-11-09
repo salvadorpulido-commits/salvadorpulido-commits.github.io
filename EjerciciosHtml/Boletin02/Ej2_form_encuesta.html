@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta de Preferencias de Desarrollo</title>
+</head>
+
+<body>
+
+    <h1>Encuesta de Preferencias de Desarrollo</h1>
+
+    <form action="https://lm.ciclo.iesnervion.es/encuesta.php" method="POST">
+
+        <fieldset>
+            <legend>Datos Académicos</legend>
+
+            <label for="nombre">Nombre y Apellidos</label>
+            <input name="nombre" id="nombre" type="text" placeholder="Ingresa tu Nombre y Apellidos" required>
+            <br>
+            <label for="ciclo">Ciclo Formativo</label>
+            <select name="ciclo" id="ciclo">
+               
+                    <option value="DAM" selected>DAM</option>
+                    <option value="DAW">DAW</option>
+                    <option value="ASIR">ASIR</option>
+            
+            </select>
+ 
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preferencias Técnicas</legend>
+
+            <p>
+                <label>Lenguajes</label>
+                <input type="radio" name="lenguaje" value="Java">Java
+                <input type="radio" name="lenguaje" value="Python">Python
+                <input type="radio" name="lenguaje" value="C#">C#
+                <input type="radio" name="lenguaje" value="JavaScript">JavaScript
+
+            </p>
+          
+            <p>
+                <label>Entornos de Trabajo</label>
+                <input type="checkbox" name="entornos[]" value="Linux">Linux
+                <input type="checkbox" name="entornos[]" value="Windows">Windows
+                <input type="checkbox" name="entornos[]" value="MacOs">MacOs
+                
+            </p>
+
+            <p>
+                <label>Comentarios/Experiencia previa</label>
+                <br>
+                <textarea name="comentarios" id="comentarios" 4 rows="4" cols="40"  placeholder="Comenta aquí:"></textarea>
+            </p>
+
+            <p>
+                <button type="reset">Restablecer formulario</button>
+
+            </p>
+
+            <p>
+                <button type="submit">Enviar formulario</button>
+            </p>
+
+
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
