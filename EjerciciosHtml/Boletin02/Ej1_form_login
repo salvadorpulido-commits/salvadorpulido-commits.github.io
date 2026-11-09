@@ -9,6 +9,8 @@
 
 <body>
 
+    <h1>Formulario de Autenticación Básico</h1>
+
     <form action="https://lm.ciclo.iesnervion.es/login.php" method="POST">
 
         <fieldset>
