@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ejercicio 3: Registro de Desarrolladores</title>
+
+</head>
+
+<body>
+
+    <!--Campos y restricciones de validación:
+        Código de Alumno: Campo de texto obligatorio. Debe cumplir el patrón de 3 letras mayúsculas seguidas de 3 números 
+          (ejemplo: DAM123). Utiliza el atributo pattern="[A-Z]{3}[0-9]{3}". (codigo)
+        Correo corporativo: Campo de tipo email obligatorio. 
+          Debe validar que tenga estructura de email válida. (email)
+        Edad: Campo numérico (type="number"). Solo se permiten valores comprendidos entre 16 y 65 años 
+          (min="16" y max="65"). (edad)
+        Teléfono de contacto: Campo de tipo tel. Debe exigir exactamente 9 dígitos numéricos mediante expresión regular 
+          (pattern="[0-9]{9}"). (telefono)
+        Sitio web / Portfolio: Campo de tipo url (opcional). (web)
+        IDE Preferido: Implementa un campo de texto vinculado a un listado de sugerencias autocompletables mediante <datalist> 
+            (opciones sugeridas: IntelliJ IDEA, Visual Studio Code, Eclipse, Android Studio). (ide)
+        Aceptación de la Política de Privacidad: Checkbox obligatorio para poder enviar el formulario. (politica)-->
+
+
+    <h1>Registro de Desarrolladores</h1>
+
+    <form action="https://lm.ciclo.iesnervion.es/registro.php" method="POST">
+
+
+        <fieldset>
+
+            <legend>Alta de Alumno</legend>
+
+            <p>
+                <label for="codigo">Código de Alumno</label>
+                <input name="codigo" id="codigo" type="text" pattern="[A-Z]{3}[0-9]{3}"
+                    placeholder="Ingresa tu Código (AAA111)" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="correocorporativo@corp.es" required>
+
+            </p>
+
+            <p>
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" min="16" max="65" placeholder="16 a 65">
+
+            </p>
+
+            <p>
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}">
+
+            </p>
+
+            <p>
+                <label for="web">Sitio Web/Portfolio</label>
+                <input type="url" name="web" id="web" placeholder="https://...">
+            </p>
+
+            <p>
+                <label for="ide">IDE Preferido</label>
+                <input type="text" name="ide" id="ide" list="ides">
+                <datalist id="ides">
+                    <option value="IntelliJ IDEA"></option>
+                    <option value="Visual Studio Code"></option>
+                    <option value="Eclipse"></option>
+                    <option value="Android Studio"></option>
+                </datalist>
+
+            </p>
+
+            <p>
+                <label for="politica">Acepta la Política de Privacidad</label>
+                <input type="checkbox" name="politica" id="politica" required>
+            </p>
+
+            <button type="submit">Registrar</button>
+
+        </fieldset>
+
+
+
+    </form>
+
+</body>
+
+</html>

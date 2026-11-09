@@ -3,17 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Autenticación Básico</title>
+    <title>Ejercicio 1: Formulario de Autenticación Básico</title>
 
 </head>
 
 <body>
+
+    <!--El formulario debe enviar los datos mediante el método POST a la URL https://lm.ciclo.iesnervion.es/login.php.
+    Debe contener los siguientes campos, cada uno con su correspondiente etiqueta <label> vinculada explícitamente mediante el atributo for:
+    Nombre de usuario o Email: Entrada de texto simple. Debe mostrar el texto de ayuda (placeholder): 
+        "usuario@dominio.com". El nombre que espera el servidor es usuario.
+    Contraseña: Entrada de tipo contraseña (password).
+
+    Recordar sesión: Casilla de verificación (checkbox). (recordar)
+
+    Incluye un botón de envío (<button type="submit">) con el texto "Iniciar Sesión".
+
+    Los campos de texto y contraseña deben ser obligatorios (required).-->
 
     <h1>Formulario de Autenticación Básico</h1>
 
     <form action="https://lm.ciclo.iesnervion.es/login.php" method="POST">
 
         <fieldset>
+            <legend>Datos de Acceso</legend>
             <label for="usuario">Nombre de usuario o Email:</label>
             <input name="usuario" id="usuario" type="text" placeholder="usuario@dominio.com" required>
             <br>
