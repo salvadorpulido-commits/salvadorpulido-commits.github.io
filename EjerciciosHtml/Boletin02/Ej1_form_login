@@ -2,38 +2,36 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<title>Formulario de Autentificacion Basico</title>
+    <meta charset="UTF-8">
+    <title>Formulario de Autenticación Básico</title>
 
 </head>
 
 <body>
 
-<form action="https://lm.ciclo.iesnervion.es/" method="post">
+    <form action="https://lm.ciclo.iesnervion.es/login.php" method="POST">
 
-    <fieldset>
-     <label for="Nombre">Nombre:</label>
-     <input name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre:">
+        <fieldset>
+            <label for="usuario">Nombre de usuario o Email:</label>
+            <input name="usuario" id="usuario" type="text" placeholder="usuario@dominio.com" required>
+            <br>
+            <label for="password">Contraseña:</label>
+            <input name="password" id="password" type="password" placeholder="Introduce la contraseña:" required>
+            <br>
+            <p>
+                <label for="recordar">Recordar Sesión</label>
+                <input type="checkbox" id="recordar" name="recordar">
 
-     <label for="email">Email:</label>
-     <input id="email" name="email" type="email" placeholder="usuario@dominio.com">
+            </p>
+            <br>
+            <button type="submit">Iniciar Sesión</button>
 
-     <label for="password">Contraseña:</label>
-     <input name="password" type="text" placeholder="Introduce la contraseña:">
 
-      <p>
-            <label for="checkbox">Recordar sesión</label>
-            <input type="checkbox" name="checkbox">
+        </fieldset>
 
-      </p>
+    </form>
 
-      
-     
-    </fieldset>
-    
-</form>
 
-    
 </body>
 
 
