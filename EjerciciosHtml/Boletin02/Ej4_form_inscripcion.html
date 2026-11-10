@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ejercicio 4: Inscripción a Evento Tech</title>
+
+</head>
+
+<body>
+
+    <!--Configuración del formulario:
+        Configura la etiqueta <form> enviando a https://lm.ciclo.iesnervion.es/inscripcion.php mediante el método POST.
+        Es imprescindible añadir el atributo enctype="multipart/form-data" para permitir la subida del archivo al servidor de pruebas.
+        Atributos de control:
+        El campo "Nombre del Equipo" debe recibir el foco automáticamente al cargar la página (autofocus). (equipo)
+        Incluye un campo "Código de Registro" predefinido en modo solo lectura (readonly) con el valor HACK-2026-SEV. (codigo_registro)
+        Entradas avanzadas de HTML5:
+        Fecha de llegada: Campo type="date" con un rango válido entre el 2026-12-01 y el 2026-12-15 (min y max). (fecha)
+        Hora de presentación: Campo type="time". (hora)
+        Color identificativo del equipo: Campo type="color". (color)
+        Nivel estimado de Java (0 a 100): Campo de tipo rango (type="range") con atributos min="0", max="100" y saltos de 5 en 5 (step="5"). (nivel_java)
+        Subir Expediente / CV: Campo de tipo archivo (type="file") que solo acepte documentos PDF (accept=".pdf"). (expediente) -->
+
+
+        <h1>Inscripción a Evento Tech</h1>
+
+        <form action="https://lm.ciclo.iesnervion.es/inscripcion.php" method="POST" enctype="multipart/form-data">
+
+            <fieldset>
+
+                <legend>Formulario de Inscripción</legend>
+
+                <label for="equipo">Nombre del equipo</label>
+                <input type="text" name="equipo" id="equipo" autofocus>
+                <br>
+                <label for="codigo_registro">Código de Registro</label>
+                <input type="text" name="codigo_registro" id="codigo_registro" value="HACK-2026-SEV" readonly>
+                               
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Entradas avanzadas</legend>
+
+                <label for="fecha">Fecha de llegada</label>
+                <input type="date" name="fecha"  id="fecha" min="2026-12-01" max="2026-12-15">
+                <br>
+                <label for="hora">Hora de presentación</label>
+                <input type="time" name="hora" id="hora">
+                <br>
+                <label for="color">Color identificativo del equipo</label>
+                <input type="color" name="color" id="color">
+                <br>
+                <label for="nivel_java">Nivel estimado de Java</label>
+                <input type="range" id="nivel_java" name="nivel_java" min="0" max="100" step="5">
+                <br>
+                <label for="expediente">Subir Expediente / CV</label>
+                <input type="file" name="expediente" id="expediente" accept=".pdf">
+                <br>
+                <button type="submit">Inscribirse</button>
+
+            </fieldset>
+
+
+        </form>
+
+</body>
+
+
+</html>
