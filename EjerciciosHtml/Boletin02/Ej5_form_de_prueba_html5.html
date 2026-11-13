@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de prueba de HTML5</title> 
+</head>
+
+<body>
+    <!--Crea una página web que contenga un formulario con los siguientes campos de información:
+
+        nombre, con un control de tipo texto obligatorio y con autofoco.
+        email, con un control de tipo email obligatorio.
+        url, con un control de tipo url que muestre la ayuda "Escribe la URL de tu página web personal".
+        fecha, con un control de tipo date.
+        tiempo, con un control de tipo time.
+        fechahora, con un control de tipo datetime.
+        mes, con un control de tipo month.
+        semana, con un control de tipo week.
+        número, con un control de tipo number que limite la entrada a un valor entre -10 y 10.
+        teléfono, con un control de tipo tel.
+        Término de búsqueda, con un control de tipo search.
+        color favorito, con un control de tipo color.
+        Un botón de envío.
+        Además, tienes que tener en cuenta los siguientes requisitos:
+
+        El título de la página debe ser Formulario de prueba de HTML5.
+        El método de envío del formulario debe ser GET.
+        El destino del envío del formulario debe ser "https://lm.ciclo.iesnervion.es/registroweb.php".
+
+ -->
+
+    <h1>Página Web</h1>
+
+    <form action="https://lm.ciclo.iesnervion.es/registroweb.php" method="GET">
+
+        <fieldset>
+
+            <legend>Formulario de HTML</legend>
+
+            <label for="nombre">Nombre</label>
+            <input name="nombre" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ingresa tu @ email" required>
+            <br>
+            <label for="url">Sitio Web</label>
+            <input type="url" name="url" id="url" placeholder="Escribe la URL de tu página web personal">
+            <br>
+
+
+
+
+
+
+        </fieldset>
+
+
+
+    </form>
+
+</body>
+</html>
