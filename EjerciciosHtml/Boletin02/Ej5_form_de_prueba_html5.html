@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de prueba de HTML5</title> 
+    <title>Formulario de prueba de HTML5</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             <legend>Formulario de HTML</legend>
 
             <label for="nombre">Nombre</label>
-            <input name="nombre" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
             <br>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Ingresa tu @ email" required>
@@ -60,8 +60,21 @@
             <input type="month" name="mes" id="mes">
             <br>
             <label for="semana">Semana</label>
-            <input type="week" name="semana" id="semana"> 
-        
+            <input type="week" name="semana" id="semana">
+            <br>
+            <label for="numero">Numero</label>
+            <input type="number" name="numero" id="numero" min="-10" max="10">
+            <br>
+            <label for="telefono">telefono</label>
+            <input type="tel" name="telefono" id="telefono">
+            <br>
+            <label for="busqueda">Termino de Busqueda</label>
+            <input type="search" name="busqueda" id="busqueda">
+            <br>
+            <label for="color">Color Favorito</label>
+            <input type="color" name="color" id="color">
+            <br>
+            <button type="submit">Enviar</button>
 
 
 
@@ -74,4 +87,5 @@
     </form>
 
 </body>
+
 </html>
